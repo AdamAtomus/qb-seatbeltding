@@ -30,6 +30,22 @@ CreateThread(function()
     end
 end)
 ```
+Here is a version that constantly plays until you put the belt on
+```
+CreateThread(function()
+    while true do
+        if IsPedInAnyVehicle(PlayerPedId(), false) then
+            local class = GetVehicleClass(GetVehiclePedIsUsing(PlayerPedId()))
+            if class ~= 8 and class ~= 13 and class ~= 14 then
+                if not seatbeltOn and not harnessOn then
+                    TriggerServerEvent("InteractSound_SV:PlayOnSource", "nobelt", 0.25)
+                end
+            end
+        end
+        Wait(1500)
+    end
+end)
+```
 
 ## Adding a Custom sounds
 
