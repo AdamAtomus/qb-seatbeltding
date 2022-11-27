@@ -1,5 +1,5 @@
 # qb-seatbeltding
-A basic block of code that plays a seatbelt noise until you put the seatbelt on, it will stop after 4 dings for 25 seconds
+A basic block of code that plays a seatbelt noise until you put the seatbelt on, it will stop after 4 dings for 25 seconds (there is also a version that plays constantly)
 ## How to install
 
 1. Add nobelt.ogg to interact-sound/client/html/sounds (Commonly located in /resources/[standalone]/interact-sound/client/html/sounds)
